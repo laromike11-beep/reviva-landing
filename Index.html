@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Reviva | صباغة المالبس الاحترافية - جدّد مالبسك</title>
+    
+    <!-- Meta Pixel Code - Replace YOUR_PIXEL_ID_HERE with your actual Facebook Pixel ID -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: #fef7e8;
+            color: #2c2b2b;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3c2c, #0e2a1f);
+            color: white;
+            padding: 3rem 0 2rem;
+            border-radius: 0 0 40px 40px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            background: #ffb347;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 800;
+            margin: 1rem 0;
+            color: #1e2f2a;
+        }
+        
+        .offer-badge {
+            background: #e63946;
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+        
+        /* Image Gallery */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .gallery-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 200px;
+            transition: transform 0.2s;
+        }
+        
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-card img {
+            max-width: 100%;
+            border-radius: 20px;
+            height: auto;
+            max-height: 220px;
+            object-fit: cover;
+        }
+        
+        .gallery-card h4 {
+            margin-top: 0.8rem;
+            font-weight: 800;
+            color: #2b8c5e;
+        }
+        
+        /* Compare Section */
+        .compare-section {
+            background: white;
+            border-radius: 48px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        
+        .compare-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        
+        .compare-item img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 24px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+            border: 3px solid #ffd89a;
+        }
+        
+        .price-box {
+            background: #fef0df;
+            padding: 1.5rem;
+            border-radius: 28px;
+            text-align: center;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #a55d35;
+            font-size: 1.3rem;
+            margin-left: 0.5rem;
+        }
+        
+        .new-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #c4450c;
+        }
+        
+        .cta-button {
+            background: #2b8c5e;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            border-radius: 60px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: #1f6e49;
+        }
+        
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 28px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #2b8c5e;
+            margin-bottom: 0.8rem;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Steps Section */
+        .steps-container {
+            background: #eef4e8;
+            border-radius: 48px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .steps-container h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .steps-img {
+            max-width: 100%;
+            border-radius: 32px;
+            margin: 1rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .steps-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .step-badge {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: white;
+            border-radius: 48px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .form-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .form-info {
+            flex: 1;
+        }
+        
+        .order-form {
+            flex: 1;
+            background: #fef9ef;
+            padding: 1.8rem;
+            border-radius: 36px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        
+        label {
+            display: block;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 60px;
+            border: 1px solid #ddd2bd;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            background: white;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #2b8c5e;
+        }
+        
+        .payment-badge {
+            background: #2b8c5e20;
+            padding: 1rem;
+            border-radius: 28px;
+            text-align: center;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        
+        .submit-btn {
+            background: #ff914d;
+            width: 100%;
+            padding: 14px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            border: none;
+            border-radius: 60px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: #e57c38;
+        }
+        
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .success-message {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 1rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            padding: 1rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #e9dbc9;
+            margin-top: 2rem;
+            color: #5f5b55;
+        }
+        
+        .contact-numbers {
+            direction: ltr;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .new-price {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>✨ جدد مالبسك بدل شراء أخرى جديدة! ✨</h1>
+        <div class="tagline">صباغة المالبس الاحترافية – REVIVA</div>
+        <div class="offer-badge">🎉 عرض خاص: 3 + 1 بألوان اختيارية 🎉</div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Image Gallery with your images -->
+    <div class="image-gallery">
+        <div class="gallery-card">
+            <img src="1000020782.jpg" alt="Reviva product before after" onerror="this.src='https://placehold.co/300x200?text=Reviva+Image'">
+            <h4>قبل & بعد – نتيجة مذهلة</h4>
+            <p>لون أسود ثابت فائق الجودة</p>
+        </div>
+        <div class="gallery-card">
+            <img src="1000020781.png" alt="Reviva promotional" onerror="this.src='https://placehold.co/300x200?text=Promo+Reviva'">
+            <h4>ألوان زاهية وثابتة</h4>
+            <p>سهل الاستعمال في المنزل</p>
+        </div>
+        <div class="gallery-card">
+            <img src="1000020779.png" alt="Reviva special offer" onerror="this.src='https://placehold.co/300x200?text=Offer'">
+            <h4>عرض خاص: 3 عليك بألوان اختيارية</h4>
+            <p>بدلاً من 1900 دج → 1600 دج فقط</p>
+        </div>
+    </div>
+    
+    <!-- Before / After Compare Section -->
+    <div class="compare-section">
+        <div class="compare-item">
+            <h3>🕊️ قبل</h3>
+            <img src="1000020782.jpg" alt="قبل الصباغة" onerror="this.src='https://placehold.co/250x200?text=Before'">
+            <p>ملابس قديمة أو باهتة</p>
+        </div>
+        <div class="compare-item">
+            <h3>🌟 بعد</h3>
+            <img src="1000020781.png" alt="بعد الصباغة" onerror="this.src='https://placehold.co/250x200?text=After'">
+            <p>ألوان زاهية وتدوم طويلاً – جودة احترافية</p>
+        </div>
+        <div class="compare-item price-box">
+            <h3>💰 العرض الخاص</h3>
+            <div>
+                <span class="old-price">1900 دج</span>
+                <span class="new-price">1600 دج فقط</span>
+            </div>
+            <p>لكل عبوة 250g – لجميع أنواع الأقمشة</p>
+            <p><strong>🎁 3 عبوات + هدية بلون اختياري مجاني</strong></p>
+            <button class="cta-button" id="scrollToFormBtn">📦 اطلب الآن – الدفع عند الاستلام</button>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-card">
+            <i class="fas fa-palette"></i>
+            <h4>ألوان زاهية وثابتة</h4>
+            <p>تدوم طويلاً تغسل ولا تزول</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-home"></i>
+            <h4>سهل الاستعمال في المنزل</h4>
+            <p>خطوات بسيطة ونتائج فاخرة</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-tshirt"></i>
+            <h4>مناسب لمختلف أنواع المالبس</h4>
+            <p>قطن، حرير، بوليستر، مزيج</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-coins"></i>
+            <h4>يوفر عليك تكلفة شراء مالبس جديدة</h4>
+            <p>اقتصادي وعملي جداً</p>
+        </div>
+    </div>
+    
+    <!-- Steps with your image -->
+    <div class="steps-container">
+        <h2><i class="fas fa-droplet"></i> طريقة استعمال REVIVA الاحترافية</h2>
+        <img src="1000020780.png" alt="طريقة استعمال Reviva" class="steps-img" onerror="this.src='https://placehold.co/800x300?text=Steps+1+to+4'">
+        <div class="steps-grid">
+            <div class="step-badge"><strong>1.</strong> التجهيز والوزن (250g)</div>
+            <div class="step-badge"><strong>2.</strong> تحضير المحلول (ماء ساخن + ملح)</div>
+            <div class="step-badge"><strong>3.</strong> عملية الصباغة (ساعة مع التحريك)</div>
+            <div class="step-badge"><strong>4.</strong> الغسل والتثبيت (ماء بارد)</div>
+        </div>
+        <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color:#2b8c5e;"></i> ألوان تدوم .. يُغسل ولا يتغير! التوصيل متوفر إلى جميع الولايات</p>
+    </div>
+    
+    <!-- Lead Form Section -->
+    <div class="form-section" id="orderForm">
+        <div class="form-wrapper">
+            <div class="form-info">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">📞 اطلب الآن ووفر المال</h2>
+                <div class="payment-badge">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <strong>الدفع عند الاستلام (Paiement à la livraison)</strong><br>
+                    <span style="font-size: 0.9rem;">لا دفع مسبق – استلم طلبك وادفع بعد التأكد</span>
+                </div>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-truck" style="color:#2b8c5e;"></i> التوصيل إلى جميع الولايات والبلديات</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> للطلب والاستفسار: <strong class="contact-numbers">0551299616</strong> / <strong class="contact-numbers">0551209616</strong></li>
+                    <li><i class="fas fa-chalkboard-user"></i> العرض ساري لفترة محدودة: 3 عبوات بسعر 1600 دج للواحدة + هدية</li>
+                </ul>
+            </div>
+            <div class="order-form">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">✍️ نموذج الطلب السريع</h3>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> الاسم الكامل *</label>
+                        <input type="text" id="fullName" placeholder="مثال: سارة أحمد" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> رقم الهاتف *</label>
+                        <input type="tel" id="phone" placeholder="05xxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> الولاية (Wilaya) *</label>
+                        <input type="text" id="wilaya" placeholder="مثال: الجزائر، وهران، قسنطينة" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-city"></i> البلدية / الكميونة (Commune) *</label>
+                        <input type="text" id="commune" placeholder="مثال: سيدي امحمد، بئر مراد رايس" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-palette"></i> اللون المفضل (اختياري)</label>
+                        <input type="text" id="colorPreference" placeholder="أسود، أزرق، أحمر...">
+                    </div>
+                    <div class="payment-badge" style="background:#ffe6cc; margin-top: 1rem;">
+                        <i class="fas fa-check-circle"></i> الدفع عند الاستلام – آمن وموثوق
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-cart-shopping"></i> تأكيد الطلب
+                    </button>
+                </form>
+                <div id="messageContainer"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Trust Badge -->
+    <div style="background: #faf1e2; border-radius: 40px; padding: 1.5rem; text-align: center; margin-bottom: 1rem;">
+        <p><strong>REVIVA صباغة المالبس – بوردة صباغة – جودة احترافية</strong></p>
+        <p>لون أسود و ألوان زاهية ثابتة – 250g لكل عبوة</p>
+        <p>اختر ألوانك المفضلة واستمتع بالتوصيل السريع</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 REVIVA – صباغة المالبس الاحترافية | للطلب: 0551299616 / 0551209616</p>
+    <p>الدفع عند الاستلام لجميع الولايات – سعر العرض 1600 دج بدلاً من 1900 دج</p>
+</footer>
+
+<script>
+    // ============================================
+    // YOUR GOOGLE APPS SCRIPT WEB APP URL
+    // ============================================
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxHuRmLl-Sowyx2YxSU-IhcGzRuLM7V3VrwMGz8H6NCP_aH9CnoP-wCWIc5r2AnAo1RBA/exec';
+    
+    // DOM Elements
+    const form = document.getElementById('leadForm');
+    const messageContainer = document.getElementById('messageContainer');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Scroll to form when CTA button clicked
+    document.getElementById('scrollToFormBtn').addEventListener('click', function() {
+        document.getElementById('orderForm').scrollIntoView({ behavior: 'smooth' });
+        
+        // Track with Facebook Pixel (if available)
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'ViewContent', {
+                content_name: 'Reviva Order Button Click',
+                content_category: 'Product',
+                value: 1600,
+                currency: 'DZD'
+            });
+        }
+    });
+    
+    // Helper function to show messages
+    function showMessage(message, type) {
+        messageContainer.innerHTML = `
+            <div class="${type === 'success' ? 'success-message' : 'error-message'}">
+                ${message}
+            </div>
+        `;
+        // Auto hide after 5 seconds
+        setTimeout(() => {
+            if (messageContainer.innerHTML.includes(message)) {
+                messageContainer.innerHTML = '';
+            }
+        }, 5000);
+    }
+    
+    // Form submission handler
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const fullName = document.getElementById('fullName').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const wilaya = document.getElementById('wilaya').value.trim();
+        const commune = document.getElementById('commune').value.trim();
+        const colorPreference = document.getElementById('colorPreference').value.trim() || 'غير محدد';
+        
+        // Validation
+        if (!fullName || !phone || !wilaya || !commune) {
+            showMessage('⚠️ الرجاء تعبئة جميع الحقول المطلوبة (الاسم، الهاتف، الولاية، البلدية)', 'error');
+            return;
+        }
+        
+        // Validate phone number (9-13 digits)
+        if (!phone.match(/^[0-9]{9,13}$/)) {
+            showMessage('⚠️ رقم الهاتف غير صحيح. يجب أن يحتوي على 9 إلى 13 رقماً', 'error');
+            return;
+        }
+        
+        // Prepare data for Google Sheets
+        const orderData = {
+            fullName: fullName,
+            phone: phone,
+            wilaya: wilaya,
+            commune: commune,
+            colorPreference: colorPreference,
+            timestamp: new Date().toISOString(),
+            source: 'Reviva Landing Page - GitHub'
+        };
+        
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> جاري الإرسال...';
+        
+        try {
+            // Send data to Google Apps Script Web App
+            // Using no-cors mode to avoid CORS issues
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(orderData)
+            });
+            
+            // Track successful lead with Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Reviva Order Submitted',
+                    content_category: 'Product Purchase',
+                    value: 1600,
+                    currency: 'DZD'
+                });
+                console.log('✅ Facebook Pixel: Lead event tracked');
+            }
+            
+            // Success message
+            showMessage('✅ تم استلام طلبك بنجاح! سنتصل بك خلال 24 ساعة لتأكيد الطلب (الدفع عند الاستلام). شكراً لثقتك بـ REVIVA', 'success');
+            
+            // Reset form
+            form.reset();
+            
+        } catch (error) {
+            console.error('Submission error:', error);
+            showMessage('❌ حدث خطأ في إرسال الطلب. يرجى المحاولة مرة أخرى أو الاتصال على 0551299616', 'error');
+        } finally {
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-cart-shopping"></i> تأكيد الطلب';
+        }
+    });
+    
+    console.log('✅ Reviva Landing Page loaded successfully!');
+    console.log('📊 Google Sheets URL configured:', GOOGLE_SCRIPT_URL);
+    console.log('📱 For questions, contact: 0551299616 / 0551209616');
+</script>
+</body>
+</html>
